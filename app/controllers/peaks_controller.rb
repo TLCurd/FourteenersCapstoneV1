@@ -1,6 +1,6 @@
 class PeaksController < ApplicationController
   def index
-    @peaks = Peak.all
+    @peaks = Peak.all.order(:name)
     render template: "peaks/index"
   end
 
