@@ -7,7 +7,7 @@ class PeaksController < ApplicationController
   def create
     peak = Peak.new(name: params[:name], range: params[:range], elevation: params[:elevation], official_14er: params[:official_14er], prominence: params[:prominence], isolation: params[:isolation], lat: params[:lat], long: params[:long], route: params[:route], distance: params[:distance], elevation_gain: params[:elevation_gain], difficulty: params[:difficulty], traffic_low: params[:traffic_low], traffic_high: params[:traffic_high], photo: params[:photo])
     if peak.save
-      render json: {message: "The peak was added to the list!"}
+      render json: {message: "The peak was added to the list!", peak: peak}
     else
       render json: {errors: peak.errors.full_messages}
     end
@@ -24,6 +24,13 @@ class PeaksController < ApplicationController
       render json: peak.as_json
     else
       render json: {errors: peak.errors.full_messages}
+    end
+  end
+
+  def destroy
+    peak = Peak.find_by(id: params[:id])
+    if peak.destroy
+      render json: {message: "The peak has been removed from the database."}
     end
   end
 end

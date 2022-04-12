@@ -30,3 +30,6 @@ Content-Type: application/json
 {
   "name" : "Really REALLY Huge Mountain Peak"
 }
+
+###
+DELETE http://localhost:3000/peaks/63
