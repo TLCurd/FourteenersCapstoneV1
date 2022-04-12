@@ -22,7 +22,7 @@ Content-Type: application/json
   "photo": "https://www.14ers.com/photos/maroongroup/peakphotos/large/200807_NMar01.jpg"
 }
 ### Show
-GET http://localhost:3000/peaks/53
+GET http://localhost:3000/peaks/53.json
 
 ### Update
 PATCH http://localhost:3000/peaks/60
