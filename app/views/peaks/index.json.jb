@@ -1,6 +1,20 @@
 @peaks.map do |peak|
   {
     id: peak.id,
-    url: peak_url(peak, format: :json)
+    name: peak.name,
+    range: peak.range,
+    elevation: peak.elevation,
+    official_14er: peak.official_14er,
+    prominence: peak.prominence,
+    isolation: peak.isolation,
+    lat: peak.lat,
+    long: peak.long,
+    route: peak.route,
+    distance: peak.distance,
+    elevation_gain: peak.elevation_gain,
+    difficulty: peak.difficulty,
+    traffic_low: peak.traffic_low,
+    traffic_high: peak.traffic_high,
+    photo: peak.photo
   }
 end
