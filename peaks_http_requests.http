@@ -1,1 +1,32 @@
-GET http://localhost:3000/peaks/58
+GET http://localhost:3000/peaks
+###
+POST http://localhost:3000/peaks
+Content-Type: application/json
+
+{
+  "name": "Huge Mountain Peak",
+  "range": "Elk Mountains",
+  "elevation": "14014 ft.",
+  "official_14er": "N",
+  "prominence": "254 ft.",
+  "isolation": "0.37",
+  "lat": "39.076007",
+  "long": "-106.987058",
+  "route": "Northeast Ridge ",
+  "distance": null,
+  "elevation_gain": "4500 ft.",
+  "difficulty": "Class 4",
+  "traffic_low": 1000,
+  "traffic_high": 3000,
+  "photo": "https://www.14ers.com/photos/maroongroup/peakphotos/large/200807_NMar01.jpg"
+}
+###
+GET http://localhost:3000/peaks/60
+
+### 
+PATCH http://localhost:3000/peaks/60
+Content-Type: application/json
+
+{
+  "name" : "Really REALLY Huge Mountain Peak"
+}
