@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_12_032031) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_12_035344) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,8 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_032031) do
     t.string "distance"
     t.string "elevation_gain"
     t.string "difficulty"
-    t.integer "traffic_low"
-    t.integer "traffic_high"
+    t.string "traffic_low"
+    t.string "traffic_high"
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
