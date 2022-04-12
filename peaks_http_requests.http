@@ -1,6 +1,6 @@
-GET http://localhost:3000/peaks
+GET http://localhost:3000/peaks.json 
 ###
-POST http://localhost:3000/peaks
+POST http://localhost:3000/peaks.json
 Content-Type: application/json
 
 {

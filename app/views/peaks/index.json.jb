@@ -1,0 +1,6 @@
+@peaks.map do |peak|
+  {
+    id: peak.id,
+    url: peak_url(peak, format: :json)
+  }
+end

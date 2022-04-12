@@ -1,7 +1,7 @@
 class PeaksController < ApplicationController
   def index
-    peaks = Peak.all
-    render json: peaks.as_json
+    @peaks = Peak.all
+    render template: "peaks/index"
   end
 
   def create
