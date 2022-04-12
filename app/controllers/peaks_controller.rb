@@ -14,8 +14,8 @@ class PeaksController < ApplicationController
   end
 
   def show
-    peak = Peak.find_by(id: params[:id])
-    render json: peak.as_json
+    @peak = Peak.find_by(id: params[:id])
+    render template: "peaks/show"
   end
 
   def update
