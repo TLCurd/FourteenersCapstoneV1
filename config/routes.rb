@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get "/peaks/:id" => "peaks#show"
   patch "/peaks/:id" => "peaks#update"
   delete "/peaks/:id" => "peaks#destroy"
+
+  # Rec Areas#
+  get "/rec_areas" => "rec_areas#index"
 end
