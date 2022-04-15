@@ -1,3 +1,4 @@
+require 'http'
 # p Peak.all 
 # peaks = Peak.all
 # peaks.each do |peak|
@@ -16,3 +17,19 @@
 #   prominence = array.slice(0, 2).join(" ")
 #   peak.update(prominence: prominence)
 # end
+
+# a = HTTP.get("https://ridb.recreation.gov/api/v1/activities?offset=0&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
+
+# i = 0
+# while i < a["RECDATA"].length
+#   activity = Activity.create(name: a["RECDATA"][i]["ActivityName"])
+#   i += 1
+# end
+
+rec_areas = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
+
+i = 0
+while i < rec_areas["RECDATA"].length
+  rec_area = RecArea.create(name: rec_areas["RECDATA"][i]["RecAreaName"], description: rec_areas["RECDATA"][i]["RecAreaDescription"], directions: rec_areas["RECDATA"][i]["RecAreaDirections"], phone_number: rec_areas["RECDATA"][i]["RecAreaPhone"], email: rec_areas["RECDATA"][i]["RecAreaEmail"], lat: rec_areas["RECDATA"][i]["RecAreaLatitude"], long: rec_areas["RECDATA"][i]["RecAreaLongitude"])
+  i += 1
+end

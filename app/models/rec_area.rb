@@ -1,0 +1,2 @@
+class RecArea < ApplicationRecord
+end

@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_12_035344) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_15_203702) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "peaks", force: :cascade do |t|
     t.string "name"
@@ -30,6 +36,19 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_12_035344) do
     t.string "traffic_low"
     t.string "traffic_high"
     t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rec_areas", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.string "directions"
+    t.string "phone_number"
+    t.string "email"
+    t.string "lat"
+    t.string "long"
+    t.string "organization"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
