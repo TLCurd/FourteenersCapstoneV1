@@ -1,1 +1,3 @@
 GET http://localhost:3000/rec_areas
+###
+GET http://localhost:3000/peaks.json
