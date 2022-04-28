@@ -1,23 +1,37 @@
-RecArea.destroy_all
+# RecArea.destroy_all
+RecAreaActivity.destroy_all
 
-response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
-# awesome_print response["RECDATA"]
-i = 0
-while i < response["RECDATA"].length
-  rec_area = RecArea.new(name: response["RECDATA"][i]["RecAreaName"], description: response["RECDATA"][i]["RecAreaDescription"], directions: response["RECDATA"][i]["RecAreaDirections"], phone_number: response["RECDATA"][i]["RecAreaPhone"], email: response["RECDATA"][i]["RecAreaEmail"], lat: response["RECDATA"][i]["RecAreaLatitude"], long: response["RECDATA"][i]["RecAreaLongitude"])
-  j = 0
-  while j < response["RECDATA"][i]["ACTIVITY"].length
-    n = response["RECDATA"][i]["ACTIVITY"][j]["ActivityID"]
-    rec_area[:activity] << n
-    j += 1
+
+# response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
+# # awesome_print response["RECDATA"]
+# i = 0
+# while i < response["RECDATA"].length
+#   rec_area = RecArea.new(name: response["RECDATA"][i]["RecAreaName"], description: response["RECDATA"][i]["RecAreaDescription"], directions: response["RECDATA"][i]["RecAreaDirections"], phone_number: response["RECDATA"][i]["RecAreaPhone"], email: response["RECDATA"][i]["RecAreaEmail"], lat: response["RECDATA"][i]["RecAreaLatitude"], long: response["RECDATA"][i]["RecAreaLongitude"])
+#   j = 0
+#   while j < response["RECDATA"][i]["ACTIVITY"].length
+#     n = response["RECDATA"][i]["ACTIVITY"][j]["ActivityID"]
+#     rec_area[:activity] << n
+#     j += 1
   
+#   end
+#   rec_area.save
+#   i += 1
+#   awesome_print rec_area
+# end
+
+
+rec_areas = RecArea.all
+rec_areas.each do |rec_area|
+  i = 0
+  while i < rec_area[:activity].length
+    rec_area_activity = RecAreaActivity.new(
+      activity_id: rec_area[:activity][i].to_i,
+      rec_area_id: rec_area[:id]
+    )
+    rec_area_activity.save
+    i += 1
   end
-  rec_area.save
-  i += 1
-  awesome_print rec_area
 end
-
-
 
 ####----- BELOW THIS IS ESSENTIALLY ALL OF THE ORIGINAL CODE I USED IN THE SEEDS TO GET TO MY LAST MAJOR COMMIT. TIME NOW IS 11 PM 4/27/22 ------####
 
