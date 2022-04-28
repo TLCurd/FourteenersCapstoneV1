@@ -2,6 +2,7 @@
   {
     id: rec_area.id,
     description: rec_area.description,
+    activities: rec_area.names_only,
     directions: rec_area.directions,
     email: rec_area.email,
     id: rec_area.id,
