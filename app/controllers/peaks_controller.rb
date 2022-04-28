@@ -1,5 +1,5 @@
 class PeaksController < ApplicationController
-  before_action :authenticate_user
+  # before_action :authenticate_user
   def index
     @peaks = Peak.all.order(:name)
     render template: "peaks/index"

@@ -1,6 +1,7 @@
 @activities.map do |activity|
   {
     id: activity.id,
-    name: activity.name
+    name: activity.name,
+    rec_areas: activity.rec_areas
   }
 end
