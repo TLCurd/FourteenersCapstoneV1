@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   
   #Activities#
   get "/activities" => "activities#index"
+  get "/activities/:id" => "activities#show"
 
   #Users#
   post "/users" => "users#create"

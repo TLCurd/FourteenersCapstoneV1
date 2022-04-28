@@ -1,5 +1,5 @@
 {
   id: @activity.id,
-  created_at: @activity.created_at,
-  updated_at: @activity.updated_at
+  name: @activity.name,
+  rec_areas: @activity.rec_area_names_ids
 }
