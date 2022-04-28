@@ -43,6 +43,10 @@ require 'awesome_print'
 # end
 # awesome_print names
 
-response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?limit=50&offset=0&state=CO")
+# response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?limit=50&offset=0&state=CO")
 
-awesome_print response.parse
+# awesome_print response.parse
+
+rec_areas = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
+
+awesome_print rec_areas

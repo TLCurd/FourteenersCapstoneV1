@@ -1,0 +1,5 @@
+{
+  id: @activity.id,
+  created_at: @activity.created_at,
+  updated_at: @activity.updated_at
+}

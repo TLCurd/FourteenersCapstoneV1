@@ -8,5 +8,14 @@ Rails.application.routes.draw do
 
   # Rec Areas#
   get "/rec_areas" => "rec_areas#index"
-  get"/rec_areas/:id" => "rec_areas#show" 
+  get"/rec_areas/:id" => "rec_areas#show"
+  
+  #Activities#
+  get "/activities" => "activities#index"
+
+  #Users#
+  post "/users" => "users#create"
+
+  #Session#
+  post "/sessions" => "sessions#create"
 end
