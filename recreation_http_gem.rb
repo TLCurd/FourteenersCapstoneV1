@@ -1,21 +1,38 @@
 require 'http'
 require 'awesome_print'
 
-response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
-# awesome_print response["RECDATA"]
-i = 0
-while i < response["RECDATA"].length
-  rec_area = RecArea.new(name: response["RECDATA"][i]["RecAreaName"], description: response["RECDATA"][i]["RecAreaDescription"], directions: response["RECDATA"][i]["RecAreaDirections"], phone_number: response["RECDATA"][i]["RecAreaPhone"], email: response["RECDATA"][i]["RecAreaEmail"], lat: response["RECDATA"][i]["RecAreaLatitude"], long: response["RECDATA"][i]["RecAreaLongitude"])
-  j = 0
-  while j < response["RECDATA"][i]["ACTIVITY"].length
-    rec_area["activity"] << response["RECDATA"][i]["ACTIVITY"][j]["ActivityID"]
-    j += 1
-  
-  end
-  rec_area.save
-  i += 1
-  awesome_print rec_area
+response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
+if response["RECDATA"][141]["MEDIA"][0]["URL"]
+  p nil
+else
+  awesome_print response["RECDATA"][141]["MEDIA"][0]["URL"]
 end
+if response["RECDATA"][141]["MEDIA"][0]["URL"]
+  p nil
+else
+  awesome_print response["RECDATA"][142]["MEDIA"][0]["URL"]
+end
+if response["RECDATA"][141]["MEDIA"][0]["URL"]
+  p nil
+else
+  awesome_print response["RECDATA"][143]["MEDIA"][0]["URL"]
+end
+
+
+# awesome_print response
+# i = 0
+# while i < response["RECDATA"].length
+#   rec_area = RecArea.new(name: response["RECDATA"][i]["RecAreaName"], description: response["RECDATA"][i]["RecAreaDescription"], directions: response["RECDATA"][i]["RecAreaDirections"], phone_number: response["RECDATA"][i]["RecAreaPhone"], email: response["RECDATA"][i]["RecAreaEmail"], lat: response["RECDATA"][i]["RecAreaLatitude"], long: response["RECDATA"][i]["RecAreaLongitude"])
+#   j = 0
+#   while j < response["RECDATA"][i]["ACTIVITY"].length
+#     rec_area["activity"] << response["RECDATA"][i]["ACTIVITY"][j]["ActivityID"]
+#     j += 1
+  
+#   end
+#   rec_area.save
+#   i += 1
+#   awesome_print rec_area
+# end
 
 ####
 
@@ -91,9 +108,9 @@ end
 
 # awesome_print response.parse
 
-rec_areas = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
+# rec_areas = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
 
-awesome_print rec_areas["RECDATA"]
+# awesome_print rec_areas["RECDATA"]
 
 # response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
 # awesome_print response["RECDATA"]
