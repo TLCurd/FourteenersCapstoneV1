@@ -2,22 +2,22 @@ require 'http'
 require 'awesome_print'
 
 response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
-if response["RECDATA"][141]["MEDIA"][0]["URL"]
-  p nil
-else
-  awesome_print response["RECDATA"][141]["MEDIA"][0]["URL"]
-end
-if response["RECDATA"][141]["MEDIA"][0]["URL"]
-  p nil
-else
-  awesome_print response["RECDATA"][142]["MEDIA"][0]["URL"]
-end
-if response["RECDATA"][141]["MEDIA"][0]["URL"]
-  p nil
-else
-  awesome_print response["RECDATA"][143]["MEDIA"][0]["URL"]
-end
-
+# if response["RECDATA"][141]["MEDIA"][0]["URL"]
+#   p nil
+# else
+#   awesome_print response["RECDATA"][141]["MEDIA"][0]["URL"]
+# end
+# if response["RECDATA"][141]["MEDIA"][0]["URL"]
+#   p nil
+# else
+#   awesome_print response["RECDATA"][142]["MEDIA"][0]["URL"]
+# end
+# if response["RECDATA"][141]["MEDIA"][0]["URL"]
+#   p nil
+# else
+#   awesome_print response["RECDATA"][143]["MEDIA"][0]["URL"]
+# end
+awesome_print response
 
 # awesome_print response
 # i = 0
