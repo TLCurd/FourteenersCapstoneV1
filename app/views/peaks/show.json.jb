@@ -14,5 +14,6 @@
   difficulty: @peak.difficulty,
   traffic_low: @peak.traffic_low,
   traffic_high: @peak.traffic_high,
-  photo: @peak.photo
+  photo: @peak.photo,
+  reviews: @peak.peak_reviews
 }
