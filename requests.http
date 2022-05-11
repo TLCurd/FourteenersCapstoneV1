@@ -29,8 +29,19 @@ Content-Type: application/json
   "review" : "We found this hike to be much more difficult than expected. In fact, we didn't even make it to the summit before the weather turned."
 }
 
+### Rec Area Reviews
+GET http://localhost:3000/rec_area_reviews.json
+###
+GET http://localhost:3000/rec_area_reviews/1.json
+###
+POST http://localhost:3000/rec_area_reviews
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
 
-
+{
+  "rec_area_id" : 145,
+  "review" : "What a great getaway! A long drive to this portion of Colorado, but the lack of crowds was what we were after - and that's exactly what we got!"
+}
 
 ### User Create
 POST http://localhost:3000/users.json

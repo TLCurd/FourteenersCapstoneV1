@@ -19,6 +19,12 @@ Rails.application.routes.draw do
   post "/peak_reviews" => "peak_reviews#create"
   get "/peak_reviews/:id" => "peak_reviews#show"
 
+  #Rec Area Reviews#
+  get "/rec_area_reviews" => "rec_area_reviews#index"
+  post "/rec_area_reviews" => "rec_area_reviews#create"
+  get "/rec_area_reviews/:id" => "rec_area_reviews#show"
+  
+
   #Users#
   post "/users" => "users#create"
 
