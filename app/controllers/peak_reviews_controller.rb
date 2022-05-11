@@ -1,0 +1,2 @@
+class PeakReviewsController < ApplicationController
+end
