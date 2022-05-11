@@ -14,6 +14,11 @@ Rails.application.routes.draw do
   get "/activities" => "activities#index"
   get "/activities/:id" => "activities#show"
 
+  #Peak Reviews#
+  get "/peak_reviews" => "peak_reviews#index"
+  post "/peak_reviews" => "peak_reviews#create"
+  get "/peak_reviews/:id" => "peak_reviews#show"
+
   #Users#
   post "/users" => "users#create"
 

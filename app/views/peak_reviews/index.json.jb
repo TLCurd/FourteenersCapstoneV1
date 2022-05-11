@@ -1,0 +1,8 @@
+@peak_reviews.map do |peak_review|
+  {
+    id: peak_review.id,
+    user_id: peak_review.user_id,
+    peak_id: peak_review.peak_id,
+    review: peak_review.review
+  }
+end

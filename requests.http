@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTExOTU0OTd9.OgOYNrSX1wN8f0bTQiip2YL6OwfJLreUtDTywgg54fM 
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIzMjk0OTR9.YO3YxRmVW-6x-vEqn5AzPW0hX-ePULTFANSUUDPv72U
 ###
 GET http://localhost:3000/rec_areas.json
 ###
@@ -14,7 +14,25 @@ GET http://localhost:3000/rec_areas/263.json
 GET http://localhost:3000/activities.json
 ###
 GET http://localhost:3000/activities/37.json
+
+### Peak Reviews
+GET http://localhost:3000/peak_reviews.json
 ###
+GET http://localhost:3000/peak_reviews/1.json
+###
+POST http://localhost:3000/peak_reviews
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "peak_id" : 2,
+  "review" : "We had such a great time. The trailhead was kind of hard to find in the dark, but otherwise well worth the trip."
+}
+
+
+
+
+### User Create
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
