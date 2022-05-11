@@ -7,7 +7,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 ###
-GET http://localhost:3000/peaks/2.json
+GET http://localhost:3000/peaks/3.json
 ###
 GET http://localhost:3000/rec_areas/263.json
 ###
@@ -18,15 +18,15 @@ GET http://localhost:3000/activities/37.json
 ### Peak Reviews
 GET http://localhost:3000/peak_reviews.json
 ###
-GET http://localhost:3000/peak_reviews/1.json
+GET http://localhost:3000/peak_reviews/6.json
 ###
-POST http://localhost:3000/peak_reviews
+POST http://localhost:3000/peak_reviews.json
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "peak_id" : 2,
-  "review" : "We had such a great time. The trailhead was kind of hard to find in the dark, but otherwise well worth the trip."
+  "peak_id" : 4,
+  "review" : "We found this hike to be much more difficult than expected. In fact, we didn't even make it to the summit before the weather turned."
 }
 
 

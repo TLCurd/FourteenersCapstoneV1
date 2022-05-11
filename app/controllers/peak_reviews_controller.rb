@@ -8,6 +8,8 @@ class PeakReviewsController < ApplicationController
   def create
     peak_review = PeakReview.new(
       user_id: current_user.id,
+      user_name: current_user.name,
+      user_email: current_user.email,
       peak_id: params[:peak_id],
       review: params[:review]
     )
