@@ -14,6 +14,7 @@ gem "seed_dump"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 gem "awesome_print"
+gem "pry"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 

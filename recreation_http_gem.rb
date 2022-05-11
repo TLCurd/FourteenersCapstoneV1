@@ -1,23 +1,49 @@
 require 'http'
 require 'awesome_print'
+require 'pry'
 
 response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
-# if response["RECDATA"][141]["MEDIA"][0]["URL"]
+
+# response["RECDATA"].each_with_index do |data, i|
+#   binding.pry
+#   p i
+#   # p data["MEDIA"][0]["URL"] 
+# end
+
+response["RECDATA"].each do |area|
+
+  if area["MEDIA"] == nil || area["MEDIA"][0] == nil
+    p nil
+  else
+    awesome_print area["MEDIA"][0]
+  end
+end
+
+# if response["RECDATA"][141]["MEDIA"] == nil
 #   p nil
 # else
 #   awesome_print response["RECDATA"][141]["MEDIA"][0]["URL"]
 # end
-# if response["RECDATA"][141]["MEDIA"][0]["URL"]
+
+# if response["RECDATA"][142]["MEDIA"] == nil
 #   p nil
 # else
 #   awesome_print response["RECDATA"][142]["MEDIA"][0]["URL"]
 # end
-# if response["RECDATA"][141]["MEDIA"][0]["URL"]
+
+# if response["RECDATA"][143]["MEDIA"] == nil
 #   p nil
 # else
 #   awesome_print response["RECDATA"][143]["MEDIA"][0]["URL"]
 # end
-awesome_print response
+
+# if response["RECDATA"][144]["MEDIA"] == nil || response["RECDATA"][144]["MEDIA"][0] == nil
+#   p nil
+# else
+#   awesome_print response["RECDATA"][144]["MEDIA"][0]["URL"]
+# end
+
+# awesome_print response
 
 # awesome_print response
 # i = 0
