@@ -9,5 +9,6 @@
   long: @rec_area.long,
   name: @rec_area.name,
   organization: @rec_area.organization,
-  phone_number: @rec_area.phone_number
+  phone_number: @rec_area.phone_number,
+  reviews: @rec_area.rec_area_reviews
 }
