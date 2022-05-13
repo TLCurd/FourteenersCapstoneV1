@@ -36,6 +36,10 @@ Content-Type: application/json
 {
   "review" : "As long as you keep your legs moving - you'll make it to the top!"
 }
+###
+DELETE http://localhost:3000/peak_reviews/7
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
 
 ### Rec Area Reviews
 GET http://localhost:3000/rec_area_reviews.json
@@ -60,7 +64,7 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/rec_area_reviews/3
+DELETE http://localhost:3000/rec_area_reviews/5
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
