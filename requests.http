@@ -68,7 +68,9 @@ DELETE http://localhost:3000/rec_area_reviews/5
 Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
-### User Create
+### User actions###
+GET http://localhost:3000/users/1.json
+###
 POST http://localhost:3000/users.json
 Content-Type: application/json
 

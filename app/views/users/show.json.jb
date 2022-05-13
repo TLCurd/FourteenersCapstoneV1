@@ -1,0 +1,7 @@
+{
+  id: @user.id,
+  name: @user.name,
+  email: @user.email,
+  peak_reviews: @user.peak_reviews,
+  rec_area_reviews: @user.rec_area_reviews
+}
