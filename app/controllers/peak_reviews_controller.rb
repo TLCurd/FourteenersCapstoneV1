@@ -25,5 +25,24 @@ class PeakReviewsController < ApplicationController
     render template: "peak_reviews/show"
   end
     
+  def update
+    peak_review = PeakReview.find(params[:id])
+    peak_review.peak_id = peak_review.peak_id
+    peak_review.review = params[:review] || peak_review.review
+    if peak_review.save!
+      render json: {message: "Your review has been updated.", edited_review: peak_review.as_json}
+    else
+      render json: {message: peak_review.errors.full_messages}, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    peak_review = PeakReview.find_by(id: params[:id])
+    if peak_review.destroy
+      render json: {message: "Your review has been deleted."}
+    else
+      render json: {error: peak_review.errors.full_messages}
+    end
+  end
 
 end

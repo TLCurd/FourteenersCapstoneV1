@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTIzMjk0OTR9.YO3YxRmVW-6x-vEqn5AzPW0hX-ePULTFANSUUDPv72U
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI1MTIzNjZ9.KqMMN6K0MCzDw9UtHsK8O0_UnNZ6GWe7TMKs9wWA_pc
 ###
 GET http://localhost:3000/rec_areas.json
 ###
@@ -28,6 +28,14 @@ Content-Type: application/json
   "peak_id" : 4,
   "review" : "We found this hike to be much more difficult than expected. In fact, we didn't even make it to the summit before the weather turned."
 }
+###
+PATCH http://localhost:3000/peak_reviews/5
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "review" : "As long as you keep your legs moving - you'll make it to the top!"
+}
 
 ### Rec Area Reviews
 GET http://localhost:3000/rec_area_reviews.json
@@ -42,6 +50,19 @@ Content-Type: application/json
   "rec_area_id" : 145,
   "review" : "What a great getaway! A long drive to this portion of Colorado, but the lack of crowds was what we were after - and that's exactly what we got!"
 }
+###
+PATCH http://localhost:3000/rec_area_reviews/1
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "review" : "This camp area was amazing. Bathrooms easily accessible, and most of all - it was easy to find! We will definitely keep this place on our list!" 
+}
+
+###
+DELETE http://localhost:3000/rec_area_reviews/3
+Authorization: Bearer {{jwt}}
+Content-Type: application/json
 
 ### User Create
 POST http://localhost:3000/users.json
