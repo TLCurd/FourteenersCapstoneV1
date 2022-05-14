@@ -32,7 +32,7 @@ Rails.application.routes.draw do
   #Users#
   get "/users" => "users#index"
   post "/users" => "users#create"
-  get "/users/:id" => "users#show"
+  get "/users/profile" => "users#show"
   patch "/users/:id" => "users#update"
   delete "/users/:id" => "users#destroy"
 

@@ -2,6 +2,14 @@
   id: @user.id,
   name: @user.name,
   email: @user.email,
-  peak_reviews: @user.peak_reviews,
+  password: @user.password_digest,
+  image: @user.image_url,
+  peak_reviews: @user.peak_reviews.map do |review|
+    {
+      review: review.review,
+      name: review.peak
+    }
+  end, 
+  peak_review_names: @user.peak_review_names,
   rec_area_reviews: @user.rec_area_reviews
 }
