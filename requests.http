@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTI1MTIzNjZ9.KqMMN6K0MCzDw9UtHsK8O0_UnNZ6GWe7TMKs9wWA_pc
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTI4MjAxNTJ9._URsEohi4wabj-VtnTD0nWm3W9kdpHd-Q9rV1AU-mIQ
 ###
 GET http://localhost:3000/rec_areas.json
 ###
@@ -25,8 +25,8 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "peak_id" : 4,
-  "review" : "We found this hike to be much more difficult than expected. In fact, we didn't even make it to the summit before the weather turned."
+  "peak_id" : 10,
+  "review" : "Weather turned towards the summit, but we persevered and made it back down before the worst of it. Immaculate views."
 }
 ###
 PATCH http://localhost:3000/peak_reviews/5
@@ -51,8 +51,8 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "rec_area_id" : 145,
-  "review" : "What a great getaway! A long drive to this portion of Colorado, but the lack of crowds was what we were after - and that's exactly what we got!"
+  "rec_area_id" : 146,
+  "review" : "I've been to better places in my years, but it got the job done."
 }
 ###
 PATCH http://localhost:3000/rec_area_reviews/1
@@ -79,7 +79,8 @@ Content-Type: application/json
   "name": "Travis",
   "email": "Travis@gmail.com",
   "password": "password",
-  "password_confirmation": "password"
+  "password_confirmation": "password",
+  "image_url" : ""
 }
 
 ### Sessions create (login)
@@ -87,6 +88,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Travis@gmail.com",
+  "email": "Edmund@gmail.com",
   "password": "password"
 }

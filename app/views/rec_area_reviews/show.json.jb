@@ -1,8 +1,8 @@
 {
   id: @rec_area_review.id,
   user_id: @rec_area_review.user_id,
-  user_name: @rec_area_review.user_name,
-  user_email: @rec_area_review.user_email,
+  user_name: @rec_area_review.user.name,
+  user_email: @rec_area_review.user.email,
   rec_area_id: @rec_area_review.rec_area_id,
   review: @rec_area_review.review,
   created_at: @rec_area_review.created_at,

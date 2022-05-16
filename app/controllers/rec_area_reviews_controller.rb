@@ -8,8 +8,6 @@ class RecAreaReviewsController < ApplicationController
   def create
     rec_area_review = RecAreaReview.new(
       user_id: current_user.id,
-      user_name: current_user.name,
-      user_email: current_user.email,
       rec_area_id: params[:rec_area_id],
       review: params[:review]
     )

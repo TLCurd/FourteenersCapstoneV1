@@ -1,8 +1,8 @@
 {
   id: @peak_review.id,
   user_id: @peak_review.user_id,
-  user_name: @peak_review.user_name,
-  user_email: @peak_review.user_email,
+  user_name: @peak_review.user.name,
+  user_email: @peak_review.user.email,
   peak_id: @peak_review.peak_id,
   review: @peak_review.review,
   created_at: @peak_review.created_at,
