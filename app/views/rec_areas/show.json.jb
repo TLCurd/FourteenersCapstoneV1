@@ -10,5 +10,12 @@
   name: @rec_area.name,
   organization: @rec_area.organization,
   phone_number: @rec_area.phone_number,
-  reviews: @rec_area.rec_area_reviews
+  reviews: @rec_area.rec_area_reviews.map do |review|
+    {
+      user_name: review.user.name,
+      user_email: review.user.email,
+      date: review.created_at,
+      review: review.review
+    }
+  end
 }
