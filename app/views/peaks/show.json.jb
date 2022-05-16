@@ -22,5 +22,6 @@
       date: review.created_at,
       review: review.review
     }
-  end
+  end,
+  within_twenty_miles: @peak.rec_areas_within_twenty_miles
 }

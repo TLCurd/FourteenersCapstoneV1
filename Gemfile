@@ -11,6 +11,7 @@ gem "pg", "~> 1.1"
 gem 'jb'
 gem "http"
 gem "seed_dump"
+gem "geocoder"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
 gem "awesome_print"
