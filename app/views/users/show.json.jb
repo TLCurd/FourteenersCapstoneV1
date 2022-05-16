@@ -7,9 +7,16 @@
   peak_reviews: @user.peak_reviews.map do |review|
     {
       review: review.review,
-      name: review.peak
+      created: review.created_at,
+      peak_name: review.peak.name
     }
   end, 
-  peak_review_names: @user.peak_review_names,
-  rec_area_reviews: @user.rec_area_reviews
+  
+  rec_area_reviews: @user.rec_area_reviews.map do |review|
+    {
+    review: review.review,
+    created: review.created_at,
+    rec_area_name: review.rec_area.name
+    }
+  end
 }
