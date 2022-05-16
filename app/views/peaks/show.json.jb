@@ -12,7 +12,7 @@
   distance: @peak.distance,
   elevation_gain: @peak.elevation_gain,
   difficulty: @peak.difficulty,
-  traffic_low: @peak.traffic_low,
+  traffic_low: @peak.traffic_low, 
   traffic_high: @peak.traffic_high,
   photo: @peak.photo,
   reviews: @peak.peak_reviews.map do |review|

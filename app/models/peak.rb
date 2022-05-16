@@ -10,7 +10,10 @@ class Peak < ApplicationRecord
       if distance <= 10
         within_ten_miles << {
           rec_area_name: rec_area.name,
-          distance: distance
+          distance: distance,
+          lat: rec_area.lat,
+          long: rec_area.long,
+          activities: rec_area.activities
         }
       end
     end
@@ -28,7 +31,10 @@ class Peak < ApplicationRecord
       if distance <= 20
         within_twenty_miles << {
           rec_area_name: rec_area.name,
-          distance: distance
+          distance: distance,
+          lat: rec_area.lat,
+          long: rec_area.long,
+          activities: rec_area.activities
         }
       end
     end
@@ -46,7 +52,10 @@ class Peak < ApplicationRecord
       if distance <= 30
         within_thirty_miles << {
           rec_area_name: rec_area.name,
-          distance: distance
+          distance: distance,
+          lat: rec_area.lat,
+          long: rec_area.long,
+          activities: rec_area.activities
         }
       end
     end
@@ -64,7 +73,10 @@ class Peak < ApplicationRecord
       if distance <= 40
         within_forty_miles << {
           rec_area_name: rec_area.name,
-          distance: distance
+          distance: distance,
+          lat: rec_area.lat,
+          long: rec_area.long,
+          activities: rec_area.activities
         }
       end
     end
@@ -82,7 +94,10 @@ class Peak < ApplicationRecord
       if distance <= 50
         within_fifty_miles << {
           rec_area_name: rec_area.name,
-          distance: distance
+          distance: distance,
+          lat: rec_area.lat,
+          long: rec_area.long,
+          activities: rec_area.activities
         }
       end
     end
