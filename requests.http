@@ -7,7 +7,7 @@ Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 ###
-GET http://localhost:3000/peaks/3.json
+GET http://localhost:3000/peaks/15.json
 ###
 GET http://localhost:3000/rec_areas/145.json
 ###
