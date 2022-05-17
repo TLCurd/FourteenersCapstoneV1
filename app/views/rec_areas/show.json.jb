@@ -17,5 +17,10 @@
       date: review.created_at,
       review: review.review
     }
-  end
+  end,
+  within_ten_miles: @rec_area.peaks_within_ten_miles,
+  within_twenty_miles: @rec_area.peaks_within_twenty_miles,
+  within_thirty_miles: @rec_area.peaks_within_thirty_miles,
+  within_forty_miles: @rec_area.peaks_within_forty_miles,
+  within_fifty_miles: @rec_area.peaks_within_fifty_miles,
 }
