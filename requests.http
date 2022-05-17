@@ -9,7 +9,7 @@ Content-Type: application/json
 ###
 GET http://localhost:3000/peaks/15.json
 ###
-GET http://localhost:3000/rec_areas/145.json
+GET http://localhost:3000/rec_areas/170.json
 ###
 GET http://localhost:3000/activities.json
 ###
