@@ -15,7 +15,8 @@ response["RECDATA"].each do |area|
   if area["MEDIA"] == nil || area["MEDIA"][0] == nil
     p nil
   else
-    awesome_print area["MEDIA"][0]
+    awesome_print area
+    awesome_print area["MEDIA"]
   end
 end
 

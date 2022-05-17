@@ -6,6 +6,7 @@ class PeakReviewsController < ApplicationController
   end
   
   def create
+    # peak = Peak.find_by(id: params[:id])
     peak_review = PeakReview.new(
       user_id: current_user.id,
       peak_id: params[:peak_id],
