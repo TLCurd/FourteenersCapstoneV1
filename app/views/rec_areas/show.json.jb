@@ -4,6 +4,7 @@
   activities: @rec_area.names_ids,
   directions: @rec_area.directions,
   email: @rec_area.email,
+  photo: @rec_area.image_url,
   id: @rec_area.id,
   lat: @rec_area.lat,
   long: @rec_area.long,

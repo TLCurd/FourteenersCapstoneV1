@@ -1,10 +1,20 @@
+require "http"
+
 rec_areas = RecArea.all
 response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offset=0&state=CO&apikey=1fd36b70-43e5-461b-979a-7cb7f80883bf").parse
 i = 0 
 while i < rec_areas.length 
-  rec_area.update(
-    
+  if response["RECDATA"][i]["MEDIA"] == nil || response["RECDATA"][i]["MEDIA"][0] == nil
+    rec_areas[i].update(
+    image_url: "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg"
   )
+  i += 1
+  else
+    rec_areas[i].update(
+    image_url: response["RECDATA"][i]["MEDIA"][0]["URL"]
+    )
+    i += 1
+  end
 end
 
 
