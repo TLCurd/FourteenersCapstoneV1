@@ -11,6 +11,7 @@ class Peak < ApplicationRecord
         within_ten_miles << {
           rec_area_name: rec_area.name,
           rec_area_id: rec_area.id,
+          rec_area_photo: rec_area.image_url,
           distance: distance,
           lat: rec_area.lat,
           long: rec_area.long,
@@ -33,6 +34,7 @@ class Peak < ApplicationRecord
         within_twenty_miles << {
           rec_area_name: rec_area.name,
           rec_area_id: rec_area.id,
+          rec_area_photo: rec_area.image_url,
           distance: distance,
           lat: rec_area.lat,
           long: rec_area.long,
@@ -55,6 +57,7 @@ class Peak < ApplicationRecord
         within_thirty_miles << {
           rec_area_name: rec_area.name,
           rec_area_id: rec_area.id,
+          rec_area_photo: rec_area.image_url,
           distance: distance,
           lat: rec_area.lat,
           long: rec_area.long,
@@ -77,6 +80,7 @@ class Peak < ApplicationRecord
         within_forty_miles << {
           rec_area_name: rec_area.name,
           rec_area_id: rec_area.id,
+          rec_area_photo: rec_area.image_url,
           distance: distance,
           lat: rec_area.lat,
           long: rec_area.long,
@@ -99,6 +103,7 @@ class Peak < ApplicationRecord
         within_fifty_miles << {
           rec_area_name: rec_area.name,
           rec_area_id: rec_area.id,
+          rec_area_photo: rec_area.image_url,
           distance: distance,
           lat: rec_area.lat,
           long: rec_area.long,
