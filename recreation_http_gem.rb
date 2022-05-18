@@ -10,15 +10,18 @@ response = HTTP.get("https://ridb.recreation.gov/api/v1/recareas?full=true&offse
 #   # p data["MEDIA"][0]["URL"] 
 # end
 
+media = []
 response["RECDATA"].each do |area|
-
   if area["MEDIA"] == nil || area["MEDIA"][0] == nil
-    p nil
+    media << nil
   else
-    awesome_print area
-    awesome_print area["MEDIA"]
+    # awesome_print area
+    # awesome_print area["MEDIA"][0]["URL"]
+    media << area["MEDIA"][0]["URL"]
   end
 end
+awesome_print media
+awesome_print media.count
 
 # if response["RECDATA"][141]["MEDIA"] == nil
 #   p nil
